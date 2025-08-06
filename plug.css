@@ -1,0 +1,330 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1650px;
+  padding: 10px 20px;
+  background: var(--text);
+  color: var(--bg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+/*
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  padding-top: 50px;
+}
+
+.search input {
+  padding: 10px;
+  border: 1px solid var(--text);
+  border-radius: 20px;
+  width: 700px;
+  font-size: 16px;
+  transition: 0.5s ease;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--text);
+  scale: 1.05;
+  border: 1px solid
+}
+*/
+
+  .search-wrapper {
+    position: relative;
+    display: flex;
+    width: 700px;
+    
+  }
+
+  .search-wrapper input:focus {
+    scale: 1.05;
+    z-index: 2;
+  }
+
+  .search-wrapper input {
+    width: 600px;
+    padding: 10px;
+    border: 1px solid var(--text);
+    border-radius: 20px;
+    font-size: 16px;
+    transition: 0.5s ease;
+    margin: 50px;
+  }
+
+  .search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 50px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 0;
+    display: none;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: -50px;
+    border-radius: 0 0 20px 20px;
+    width: 600px;
+  }
+
+  .search-suggestions div {
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  .search-suggestions div:hover {
+    background: #f4c542;
+    color: #000;
+  }
+
+.logo {
+  margin-left: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  transition-duration: 1s ease;
+}
+
+.nav-links ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.nav-links, a {
+  padding: 15px;
+  color: var(--primary);
+  text-decoration: none;
+  margin-right: 50px;
+  transition: 0.5s ease;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--bg);
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 15px 30px;
+transition-duration: 1s ease;
+}
+
+ 
+.selected {
+   color: var(--bg);
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 15px 30px;
+}
+
+.ctx {
+  margin-left: 10px;
+  margin-right: 30px;
+  padding: 10px 25px;
+  border-radius:50px;
+  border: solid 1px white;
+  background: white;
+  transition: 0.5s ease;
+}
+
+.ctx:hover {
+  background: var(--primary);
+  border: solid 1px var(--primary);
+  cursor: pointer;
+  color: var(--bg);
+}
+
+
+    :root {
+      --primary: #f4c542; /* mustard */
+      --bg: #ffffff;      /* white */
+      --text: black;    /* black */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+    }
+    
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      margin-top: 50px;
+      color: #444;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      padding-top: 10px;
+      border: solid 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 60%;
+      height: 220px;
+      object-fit: contain;
+      object-position: center;
+      margin-left: 50px;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .deliver-badge {
+      display: inline-block;
+      background: var(--primary);
+      padding: 4px 10px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .cta {
+       background: var(--text);
+       color: white;
+       padding: 5px 10px;
+       border-radius: 50px;
+       display: flex;
+       justify-content: center;
+       margin-top: 15px;
+       transition: 0.5s ease;
+    }
+
+    .cta:hover{
+      cursor: pointer;
+      background: var(--primary);
+      color: var(--text);
+    }
+
+        .contact-bubble {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: #000;
+      border-radius: 30px;
+      padding: 10px 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.5s ease;
+    }
+
+     .contact-bubble img {
+      width: 28px;
+      height: 28px;
+      
+    }
+
+    .contact-bubble:hover {
+      scale: 1.2;
+      transition-duration: 1s ease;
+    }
+
+    footer {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .profile-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      z-index: 1;
+      margin-right: 5px;
+      
+    }
+
+    .profile-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: 0.5s ease;
+    } 
+    
+    .profile-icon img:hover {
+      scale: 1.5;
+      transition-duration: 1s ease;
+    }
+ 
+
+    .card img {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}

@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: sans-serif;
+  font-weight: 500;
+  background: white;
+  color: #181818;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.logo {
+  cursor: pointer;
+  transition: 0.5s ease;
+  color: white;
+}
+
+.logo:hover {
+  opacity: 0.5;
+}
+
+.navbar {
+   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+   position: sticky;
+   top: 0;
+   z-index: 999;
+   background-color: #181818;
+}
+
+.navbar {
+align-items: center;
+padding: 25px;
+}
+
+ul,li {
+  list-style-type: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-left: 15px;
+
+}
+
+.cta {
+  padding: 10px 25px;
+  border-radius:50px ;
+  border: white solid 1px;
+  transition: 0.5s ease;
+  background-color: white;
+}
+
+.cta:hover {
+  background: rgba(133, 130, 130, 0.8);
+  color: white;
+  cursor: pointer;
+  border: rgba(133, 130, 130, 0.8) solid 1px;
+}
+
+a:hover {
+  color: rgba(133, 130, 130, 0.8);
+  transition: all 0.5s ease;
+}
+
+a::after {
+  content: "";
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+  transform: scaleX(0);
+  position: absolute;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+a {
+  width: max-content;
+  position: relative;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  
+}
+
+
+
+.slides, img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  scroll-snap-align: start;
+  flex: 1 0 100%;
+  cursor: pointer;
+}
+
+.slider-nav a {
+  display: inline-block;
+  margin-top: 20px;
+  z-index: 1;
+  left: 45%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  color: white;
+  width: 0.5rem;
+  height: 0.5rem;
+  transition: opacity ease;
+  
+}
+
+.slider-nav a:hover {
+  opacity: 0.5;
+}
+
+
+
+.buzznews p {
+  columns: 2;
+  line-height: 50px;
+  margin-top: 150px;
+  padding: 15px;
+
+}
+
+.buzznews h1 {
+  margin-top: 150px;
+  text-align: center;
+  text-transform: capitalize;
+}

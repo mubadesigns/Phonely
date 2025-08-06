@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlexPage - Personal Branding Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00ffd5;
+      margin-bottom: 15px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    p.bio {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .link-grid {
+      display: grid;
+      gap: 12px;
+    }
+    .link-grid a {
+      background: #00ffd5;
+      padding: 10px;
+      border-radius: 10px;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .link-grid a:hover {
+      background: #00e6c1;
+    }
+    .quote {
+      font-style: italic;
+      margin-top: 25px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://i.imgur.com/1Q9Z1ZC.png" alt="Avatar" class="avatar" />
+    <h1>JayCee FX</h1>
+    <p class="bio">Forex Mentor | Crypto Wizard | Owner of 3 Brands | I help guys like you start making passive cash from online moves. 💸</p>
+    <div class="link-grid">
+      <a href="#">💬 WhatsApp</a>
+      <a href="#">📷 Instagram</a>
+      <a href="#">📈 Learn Forex</a>
+      <a href="#">💼 Book Mentorship</a>
+      <a href="#">🔗 Telegram Channel</a>
+    </div>
+    <p class="quote">“No be flex, na result.”</p>
+  </div>
+</body>
+</html>
